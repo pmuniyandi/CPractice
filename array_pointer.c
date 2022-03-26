@@ -2,10 +2,13 @@
 1. Creating array travel using index
 2. How to use array name as pointer and travel like pointer
 3. User defined function
-4. Function overloading
+4. Function overloading (c++)!
 5. Call by value
+
 6. Call by reference
 7. Recursive funtion
+
+/*
 8. Variable of length function
      #include <stdarg.h>, header
      va_list valist; declare variable
