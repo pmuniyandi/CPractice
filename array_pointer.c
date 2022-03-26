@@ -1,35 +1,34 @@
 /*
-Creating array and travel using pointers
+1. Creating array travel using index
+2. How to use array name as pointer and travel like pointer
+3. User defined function
+4. Function overloading
+5. Call by value
+6. Call by reference
+7. Recursive funtion
+8. Variable of length function
+     #include <stdarg.h>, header
+     va_list valist; declare variable
+     va_start(valist, num);  allocate memory
+     va_end(valist); clean member
+     va_arg(valist, int); access data
 */
 
 #include <stdio.h>
-// Call by value function
-void multipleby100(int number){
-     number = number*100;
-     printf("%d , %p\n", number,&number);
-}
-void multiplebyref100(int number[]){
-     number[0] = number[0]*100;
-     printf("%d , %p\n", number[0],number);
-}
+
 int main() {
-    long int marks[] = {10, 20, 30, 40};
-    // Travel using index
-    //printf("%p\n", marks);
-    //printf("%p, %p, %p, %p\n", &marks[0], &marks[1], &marks[2], &marks[3]);
-    //printf("%ld, %ld, %ld, %ld\n", marks[0], marks[1], marks[2], marks[3]);
-    // Travel using pointer
-    //printf("%p, %p, %p, %p\n", (marks+0), (marks+1), (marks+2), (marks+3));
-    //printf("%ld, %ld, %ld, %ld\n", *(marks+0), *(marks+1), *(marks+2), *(marks+3));
-    int number = 10;
-    printf("%d , %p\n", number,&number);
-
-    multipleby100(number);
-    printf("%d , %p\n", number,&number);
-
-    int num[] = {10};
-    printf("%d , %p\n", num[0],num);
-
-    multiplebyref100(num);
-    printf("%d , %p\n", num[0],num);
+     int marks[] = {80,90,87,56,88};
+     // Travel using location/index
+     printf("Array travel by index/location  %ld\n", sizeof(int));
+     printf("%p\n", marks);
+     for(int loop=0;loop<5;loop++) { // access by location/index
+          printf("%d -> %p -> %d\n", loop, &marks[loop], marks[loop]);
+     }
+     // marks[0] -> marks + 0 847e
+     // marks[1] -> marks + 1 8480
+     printf("Array travel by array name as address  %ld\n",sizeof(int));
+     printf("%p\n", marks);
+     for(int loop=0;loop<5;loop++) { // access by location/index
+          printf("%d -> %p -> %d\n", loop, marks+loop, *(marks+loop));
+     }
 }
