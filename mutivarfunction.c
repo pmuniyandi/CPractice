@@ -11,13 +11,27 @@
 
 int sumnumbers(int number, ...) {
     va_list valist; 
-    
-    va_start(valist, num);
-    va_arg(valist, int);
+    int sum = 0;
+    va_start(valist, number);
+    for (int loop = 0; loop < number; loop++) {
+      sum += va_arg(valist, int);
+    }
     va_end(valist);
+    return sum;
+}
 
+int displayname(int number, ...) {
+    va_list valist; 
+    int sum = 0;
+    va_start(valist, number);
+    for (int loop = 0; loop < number; loop++) {
+      printf("%s", va_arg(valist, char*));
+    }
+    va_end(valist);
+    return sum;
 }
 
 int main() {
-
+    printf("Average of 2, 3, 4, 5 = %d\n", sumnumbers(4, 2,3,4,5));
+    displayname(2, "Muni","Ravi");
 }
