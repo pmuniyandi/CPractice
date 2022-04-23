@@ -1,32 +1,37 @@
 
 
 #include<stdio.h>
-enum workday {MON=10, TUE=12, WED=9, THU, FRI};
 
-struct struct1
-{
-    int a;
-    int b;
-};
+//#define MON 1
+//#define TUE 2
+//#define WED 3
+//#define THU 4
+//#define FRI 5
 
-union union1
-{
-    int a;
-    int b;
-};
+enum workday {MON=2, TUE, WED, THU, FRI};
 
-
+const int mon = 1;
+const int tue = 2;
+const int wed = 3;
+const int thu = 4;
+const int fri = 5;
 
 int main() {
-    struct struct1 s1;
-    s1.a = 20;
-    s1.b = 30;
-    printf("%lu %d %d\n", sizeof(s1),s1.a, s1.b);
+    //union union1 u1; // creating variable
+  
+    //u1.number1 = 20;
+    //u1.number2 = 30;
 
-    union union1 u1;
-    u1.a = 20;
-    u1.b = 30;
-    printf("%lu %d %d\n", sizeof(u1),u1.a, u1.b);
+    //printf("%d %d\n", u1.number1, u1.number2);
 
     printf("%d, %d, %d, %d, %d %lu", MON, TUE, WED, THU, FRI,sizeof(enum workday));
+}
+
+
+void fun1 () {
+
+}
+
+main() {
+
 }
