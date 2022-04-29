@@ -1,5 +1,5 @@
 #include<stdio.h> 
-
+ # checking
 int main() {
     char char_var = 'c';  // 1 
     
