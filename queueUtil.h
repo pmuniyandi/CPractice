@@ -38,7 +38,7 @@ void displayQueue() {
     printf("[");
     struct dqueue *tptr = head;
     while(tptr) {
-        printf("%d", tptr->data);
+        printf("(%p : %d -> %p)", tptr, tptr->data, tptr->nxt); //current object address, Data, next object address
         if(tptr->nxt) 
             printf(",");
         tptr = tptr->nxt;

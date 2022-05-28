@@ -23,17 +23,20 @@ void listArray() {
 
 void addElement(int data) {
     struct darray *tptr = dlist;
-    struct darray *node =  (struct darray *)calloc(1,sizeof(struct darray));
 
-    node->data = data;
+    struct darray *node =  (struct darray *)calloc(1,sizeof(struct darray));
+    node->data = data;  // data assign to node -> data
     node->nxt = NULL;
+
      if(tptr == NULL) {
         dlist = node;
         return;
      } 
+
      while(tptr->nxt!=NULL) {
          tptr = tptr->nxt;
      }
+     
     tptr->nxt = node;
 }
 
