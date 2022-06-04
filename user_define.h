@@ -1,4 +1,4 @@
-#define PI 3.14 
+#define PI 3.14);
 #define SQR(x) x*x
 #define CUBE(x) x*x*x
 #define AREA(s) s*s
