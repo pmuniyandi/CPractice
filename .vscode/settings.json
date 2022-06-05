@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "userdefinedfun.h": "c"
+        "userdefinedfun.h": "c",
+        "typeinfo": "c",
+        "bill.h": "c"
     }
 }
